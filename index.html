@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,7 +8,7 @@
 <body>
 <x-dc>
 <helmet>
-<meta name="description" content="CV of Michele Panarotto — Java Backend Developer at Galileo Network. Java / Spring Boot microservices for regulated financial software: credit risk reporting, AML, document management.">
+<meta name="description" content="CV of Michele Panarotto — Backend Software Engineer at Galileo Network. Java / Spring Boot microservices for regulated financial software: credit risk reporting, AML, document management.">
 <link rel="stylesheet" href="./styles.css">
 <script src="./image-slot.js"></script>
 <style>
@@ -164,7 +164,7 @@
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Michele Panarotto",
-  "jobTitle": "Java Backend Developer",
+  "jobTitle": "Backend Software Engineer",
   "email": "mailto:michelepanarotto00@gmail.com",
   "telephone": "+393482107733",
   "url": "https://www.linkedin.com/in/michelepanarotto",
@@ -177,7 +177,7 @@
   "worksFor": {"@type": "Organization", "name": "Galileo Network s.p.a.", "description": "CRM software for the financial sector", "location": "Padova, IT"},
   "hasOccupation": {
     "@type": "Occupation",
-    "name": "Java Backend Developer",
+    "name": "Backend Software Engineer",
     "occupationLocation": {"@type": "City", "name": "Padova"},
     "skills": "Java, Spring Boot, Maven, Hibernate, REST API, microservices, SQL, Liquibase, Elasticsearch, Kibana, Docker, Alfresco, Git, Playwright, Agile, regulatory reporting, AML"
   },
@@ -214,9 +214,9 @@
       <a href="#sec-exp"><span data-it="">Esperienza</span><span data-en="">Experience</span></a>
       <a href="#sec-ai"><span data-it="">AI</span><span data-en="">AI</span></a>
       <a href="#sec-edu"><span data-it="">Istruzione</span><span data-en="">Education</span></a>
+      <a href="#sec-projects"><span data-it="">Progetti</span><span data-en="">Projects</span></a>
       <a href="#sec-skills"><span data-it="">Competenze</span><span data-en="">Skills</span></a>
       <a href="#sec-lang"><span data-it="">Lingue</span><span data-en="">Languages</span></a>
-      <a href="#sec-patente" data-it="">Patente</a>
     </nav>
   </div>
 
@@ -227,12 +227,12 @@
     <header class="cv-header" style="display:grid;grid-template-columns:1fr 150px;gap:var(--space-6);align-items:start">
       <div>
         <div style="font-family:var(--font-heading);font-size:11px;letter-spacing:0.28em;text-transform:uppercase;color:var(--color-accent-700);margin-bottom:6px">
-          Java Backend Developer
+          <span data-en="">Backend Software Engineer</span><span data-it="">Analista Programmatore</span>
         </div>
         <h1 style="font-size:46px;line-height:0.98;margin:0 0 var(--space-2);text-transform:uppercase;letter-spacing:-0.01em">Michele<br>Panarotto</h1>
         <p style="font-size:13px;line-height:1.55;max-width:52ch;margin:var(--space-2) 0 0;color:var(--color-neutral-800)">
-          <span data-en="">Java Backend Developer with over five years of experience (since 2020) building backend systems for regulated financial software. Sole owner of a portfolio of Java / Spring Boot microservices — from analysis and design through release to production support. Open to relocation.</span>
-          <span data-it="">Java Backend Developer con oltre cinque anni di esperienza (dal 2020) nello sviluppo backend per software finanziario regolamentato. Unico responsabile di un portfolio di microservizi Java / Spring Boot — dall'analisi e progettazione al rilascio fino al supporto in produzione. Disponibile al trasferimento.</span>
+          <span data-en="">Backend Software Engineer with over five years of experience (since 2020) building backend systems for regulated financial software. Sole owner of a portfolio of Java / Spring Boot microservices — from analysis and design through release to production support. Open to relocation.</span>
+          <span data-it="">Analista Programmatore con oltre cinque anni di esperienza (dal 2020) nello sviluppo backend per software finanziario regolamentato. Unico responsabile di un portfolio di microservizi Java / Spring Boot — dall'analisi e progettazione al rilascio fino al supporto in produzione. Disponibile al trasferimento.</span>
         </p>
       </div>
       <figure class="blueprint cv-photo" style="margin:0;width:150px;height:180px">
@@ -265,52 +265,38 @@
 
         <article class="cv-entry" style="margin-bottom:var(--space-6)">
           <div class="cv-entry-head" style="display:flex;justify-content:space-between;gap:var(--space-3);align-items:baseline">
-            <h3 style="font-size:18px;margin:0">Java Backend Developer</h3>
+            <h3 style="font-size:18px;margin:0"><span data-en="">Backend Software Engineer</span><span data-it="">Analista Programmatore</span></h3>
             <span style="font-size:11px;white-space:nowrap;font-family:var(--font-heading);letter-spacing:0.06em;color:var(--color-neutral-600)">
               <span data-it="">OTT 2021 — OGGI</span><span data-en="">OCT 2021 — PRESENT</span>
             </span>
           </div>
           <div style="font-size:12px;color:var(--color-accent-700);font-weight:700;margin:2px 0 2px">Galileo Network s.p.a. · Padova</div>
           <div style="font-size:11px;color:var(--color-neutral-600);margin:0 0 var(--space-2)">
-            <span data-it="">Software gestionale (CRM) per il settore finanziario.</span><span data-en="">CRM software for the financial sector.</span>
+            <span data-it="">Software gestionale (CRM) per il settore finanziario. Preceduto da due tirocini in azienda (set–nov 2020, feb–mag 2021).</span><span data-en="">CRM software for the financial sector. Preceded by two internships at the company (Sep–Nov 2020, Feb–May 2021).</span>
           </div>
           <ul class="cv-bullets">
             <li>
-              <span data-en="">Sole owner of 10 Java / Spring Boot microservices (8 in production), some built from scratch and others inherited, across distinct functional domains — <span class="cv-domains">credit risk reporting, AML, document management, mail / PEC delivery, scheduling, questionnaires, consulting management, advanced task lists</span> — from analysis to release to production support. These include Pulse (webhook orchestration, in production) and mail / PEC delivery (SMTP with OAuth2 Google / Microsoft; PEC via MailDocPro). End-to-end ownership; colleagues manage the gateway and other services.</span>
-              <span data-it="">Unico responsabile di 10 microservizi Java / Spring Boot (8 in produzione), alcuni sviluppati da zero e altri ereditati, su domini funzionali distinti — <span class="cv-domains">centrale rischi, antiriciclaggio, gestione documentale, invio mail / PEC, agenda appuntamenti, questionari, consulenze, task list avanzate</span> — dall'analisi al rilascio fino al supporto in produzione. Tra questi Pulse (orchestrazione di webhook, in produzione) e l'invio mail e PEC (SMTP con OAuth2 Google / Microsoft; PEC via MailDocPro). Lavoro in autonomia; i colleghi presidiano il gateway e altri servizi.</span>
+              <span data-en="">Sole owner of 10 Java / Spring Boot microservices (8 in production) in a financial-sector CRM used by [[ASK: how many banks / end users?]] — including the risk-management (Central Credit Register reporting) and document-management services, the two largest on the platform (~[[ASK: rough size of these two — lines of code, endpoints, or tables?]] and [[ASK: daily transactions / requests they handle?]]). <span class="cv-domains">Domains span credit-risk reporting, AML, document management, mail / PEC delivery, scheduling, questionnaires, consulting management and advanced task lists</span> — from analysis and design through release to production support.</span>
+              <span data-it="">Unico responsabile di 10 microservizi Java / Spring Boot (8 in produzione) in un CRM per il settore finanziario usato da [[ASK: how many banks / end users?]] — inclusi i servizi di gestione del rischio (segnalazioni Centrale Rischi) e gestione documentale, i due più grandi della piattaforma (~[[ASK: rough size of these two — lines of code, endpoints, or tables?]] e [[ASK: daily transactions / requests they handle?]]). <span class="cv-domains">I domini spaziano da centrale rischi, antiriciclaggio, gestione documentale, invio mail / PEC, agenda appuntamenti, questionari, consulenze e task list avanzate</span> — dall'analisi e progettazione al rilascio fino al supporto in produzione.</span>
             </li>
             <li>
-              <span data-en="">Regulatory scope: primary data management for Bank of Italy reporting via external providers; design of AML risk scoring and updates workflow, orchestrated across multiple microservices (PEC = certified email, legally binding in Italy).</span>
-              <span data-it="">Ambito regolamentare: gestione delle prime informazioni a Banca d'Italia tramite provider esterni; progettazione della procedura di calcolo e aggiornamento del grado di rischio anagrafico AML, orchestrata su più microservizi.</span>
+              <span data-en="">[[ASK: your proudest single piece of work — what did you build or redesign, what was broken or missing before, and what measurably improved? (e.g. the AML risk-scoring calculation-and-update workflow orchestrated across multiple microservices — was that it?)]]</span>
+              <span data-it="">[[ASK: your proudest single piece of work — what did you build or redesign, what was broken or missing before, and what measurably improved? (e.g. the AML risk-scoring calculation-and-update workflow orchestrated across multiple microservices — was that it?)]]</span>
             </li>
             <li>
-              <span data-en="">Maintenance of the corporate framework used by development teams.</span>
-              <span data-it="">Manutenzione del framework aziendale utilizzato dai team di sviluppo.</span>
+              <span data-en="">Sole responder for production issues across these services — ~[[ASK: tickets per month?]] a month, average resolution [[ASK: average resolution time?]], with no escalation to senior staff.</span>
+              <span data-it="">Unico referente per gli incidenti in produzione su questi servizi — ~[[ASK: tickets per month?]] al mese, risoluzione media [[ASK: average resolution time?]], senza escalation a personale senior.</span>
             </li>
             <li>
-              <span data-en="">Ownership of the document management microservice that centralizes company-wide legacy systems.</span>
-              <span data-it="">Presa in carico del microservizio documentale che centralizza i sistemi legacy aziendali.</span>
+              <span data-en="">Single point of contact for the external UI vendor, coordinating deploys, fixes and releases across three products — [[ASK: roughly how many tickets, across how many releases?]].</span>
+              <span data-it="">Unico punto di contatto con il fornitore esterno della UI, coordinando deploy, correzioni e rilasci su tre prodotti — [[ASK: roughly how many tickets, across how many releases?]].</span>
             </li>
             <li>
-              <span data-en="">Sole technical contact with external UI development company: coordination of deploys, bug fixes, and releases across three software products.</span>
-              <span data-it="">Unico punto di contatto tecnico con l'azienda esterna che sviluppa la UI: coordinamento di deploy, bug e rilasci su tre software.</span>
-            </li>
-            <li>
-              <span data-en="">When the PM, help-desk, projects or account management bring a functional need, I make it technical and split it into sub-tasks for the colleagues involved — UI included — through to production.</span>
-              <span data-it="">Quando il PM, l'help desk, l'area progetti o l'account management portano una necessità funzionale, la rendo tecnica e la scompongo nei sotto-task per i colleghi coinvolti — UI inclusa — fino alla produzione.</span>
-            </li>
-            <li>
-              <span data-en="">Production incidents: I triage help-desk reports — dispatching them to the right owner or investigating myself across logs and call traces on my services and the gateway — and, when the fault is mine, fix and release to production with the deploy owner.</span>
-              <span data-it="">Incidenti in produzione: gestisco le segnalazioni dell'help desk — le indirizzo a chi di competenza o le analizzo io su log e tracce delle chiamate, dei miei servizi e del gateway — e, quando l'errore è mio, correggo e rilascio in produzione con il responsabile dei deploy.</span>
+              <span data-en="">Daily AI-assisted development for ~12 months (~8 in production work), spanning design, implementation and documentation.</span>
+              <span data-it="">Sviluppo assistito da AI quotidiano per ~12 mesi (~8 su lavoro in produzione), tra progettazione, implementazione e documentazione.</span>
             </li>
           </ul>
         </article>
-
-        <!-- OPTIONAL BLOCK — remove this single line to drop the waiter job -->
-        <p class="cv-entry cv-block" style="font-size:11.5px;color:var(--color-neutral-700);margin:0 0 var(--space-2)">
-          <span data-en=""><strong>Bar &amp; restaurant server</strong> (part-time) · Bar Ristorante al Pellegrino, Chiampo · Jun 2018 — Oct 2021</span>
-          <span data-it=""><strong>Cameriere bar e ristorante</strong> (part-time) · Bar Ristorante al Pellegrino, Chiampo · Giu 2018 — Ott 2021</span>
-        </p>
 
         <!-- AI-powered development -->
         <div id="sec-ai" class="cv-section-head" style="display:flex;align-items:center;gap:var(--space-3);margin:var(--space-8) 0 var(--space-4)">
@@ -356,10 +342,13 @@
           </div>
           <div style="font-size:12px;color:var(--color-accent-700);font-weight:700;margin:2px 0 4px">Fondazione ITS Kennedy ICT · Padova</div>
           <p style="font-size:11px;font-style:italic;color:var(--color-neutral-600);margin:0 0 4px">
-            <span data-it="">ITS: percorso di formazione terziaria professionalizzante (post-diploma, 2 anni, ambito ICT).</span><span data-en="">ITS: a post-secondary vocational programme (2 years, ICT).</span>
+            <span data-it="">ITS: percorso di formazione terziaria professionalizzante (post-diploma, 2 anni, ambito ICT).</span><span data-en="">Fondazione ITS Kennedy — two-year post-secondary vocational programme in ICT (EQF level 5), Italy's applied alternative to a bachelor's degree.</span>
           </p>
           <p style="font-size:12px;margin:0;color:var(--color-neutral-800)">
             <span data-it="">Sviluppo web: Git, SQL Server, networking e sistemi operativi, Angular, C#, .NET, Java, Spring Boot, JavaScript, AWS, Azure, REST API.</span><span data-en="">Web development: Git, SQL Server, networking &amp; operating systems, Angular, C#, .NET, Java, Spring Boot, JavaScript, AWS, Azure, REST APIs.</span>
+          </p>
+          <p style="font-size:11px;margin:4px 0 0;color:var(--color-neutral-700)">
+            <span data-it="">Voto finale: [[ASK: ITS final grade?]]</span><span data-en="">Final grade: [[ASK: ITS final grade?]]</span>
           </p>
         </article>
 
@@ -376,7 +365,25 @@
           <p style="font-size:12px;margin:0;color:var(--color-neutral-800)">
             <span data-it="">Basi di programmazione a oggetti (C++, Java) e sviluppo web (HTML, CSS, JavaScript, PHP), SQL.</span><span data-en="">Object-oriented programming fundamentals (C++, Java) and web development (HTML, CSS, JavaScript, PHP), SQL.</span>
           </p>
+          <p style="font-size:11px;margin:4px 0 0;color:var(--color-neutral-700)">
+            <span data-it="">Voto di diploma: [[ASK: high-school diploma grade?]]</span><span data-en="">Diploma grade: [[ASK: high-school diploma grade?]]</span>
+          </p>
         </article>
+
+        <!-- Projects — awaiting material from Michele -->
+        <div id="sec-projects" class="cv-section-head" style="display:flex;align-items:center;gap:var(--space-3);margin:var(--space-8) 0 var(--space-4)">
+          <span style="width:8px;height:8px;background:var(--color-accent);flex:none"></span>
+          <h2 style="font-size:15px;text-transform:uppercase;letter-spacing:0.16em;margin:0">
+            <span data-it="">Progetti</span><span data-en="">Projects</span>
+          </h2>
+          <span style="flex:1;height:1px;background:var(--color-divider)"></span>
+        </div>
+        <div class="cv-entry cv-block" style="margin-bottom:var(--space-4)">
+          <p style="font-size:12px;line-height:1.55;margin:0;color:var(--color-neutral-800)">
+            <span data-en="">[[ASK: 2–3 personal projects with GitHub links — for each: name, one line on what it does and why you built it, main tech, and the link. If you have none to show, say so and this section will be removed.]]</span>
+            <span data-it="">[[ASK: 2–3 personal projects with GitHub links — for each: name, one line on what it does and why you built it, main tech, and the link. If you have none to show, say so and this section will be removed.]]</span>
+          </p>
+        </div>
       </div>
 
       <!-- SIDEBAR -->
@@ -411,32 +418,24 @@
             <div style="display:flex;justify-content:space-between"><span data-it="">Italiano</span><span data-en="">Italian</span><span style="color:var(--color-neutral-600)"><span data-it="">Madrelingua</span><span data-en="">Native</span></span></div>
             <div style="display:flex;justify-content:space-between"><span data-it="">Inglese</span><span data-en="">English</span><span style="color:var(--color-neutral-600)">B2</span></div>
             <div style="font-size:10.5px;line-height:1.4;color:var(--color-neutral-600);margin-top:-2px"><span data-it="">Parlato, scritto e letto senza difficoltà.</span><span data-en="">Spoken, written and read without difficulty.</span></div>
+            <div style="font-size:10.5px;line-height:1.4;color:var(--color-neutral-600)"><span data-it="">[[ASK: official English certification (IELTS / TOEFL / Cambridge) and score — held or planned?]]</span><span data-en="">[[ASK: official English certification (IELTS / TOEFL / Cambridge) and score — held or planned?]]</span></div>
           </div>
         </div>
 
-        <!-- License — Italian convention, IT version only -->
-        <div id="sec-patente" class="cv-block" data-it="">
-          <div style="display:flex;align-items:center;gap:var(--space-2);margin-bottom:var(--space-3)">
-            <span style="width:8px;height:8px;background:var(--color-accent);flex:none"></span>
-            <h2 style="font-size:13px;text-transform:uppercase;letter-spacing:0.14em;margin:0">Patente</h2>
-          </div>
-          <div style="font-size:12px">Patente B — automunito</div>
-        </div>
       </aside>
     </div>
 
-    <!-- GDPR consent — shown in both languages.
+    <!-- GDPR consent — Italian convention, IT version only.
          References the EU Regulation only (the old national decree is repealed). -->
-    <p style="font-size:9.5px;line-height:1.5;color:var(--color-neutral-600);margin:var(--space-8) 0 0;padding-top:var(--space-3);border-top:1px solid var(--color-divider)">
-      <span data-it="">Autorizzo il trattamento dei dati personali contenuti nel mio CV ai sensi dell'art. 13 del Regolamento UE 2016/679 (GDPR) sulla protezione dei dati personali.</span>
-      <span data-en="">I authorise the processing of the personal data contained in my CV pursuant to Article 13 of EU Regulation 2016/679 (GDPR) on the protection of personal data.</span>
+    <p data-it="" style="font-size:9.5px;line-height:1.5;color:var(--color-neutral-600);margin:var(--space-8) 0 0;padding-top:var(--space-3);border-top:1px solid var(--color-divider)">
+      Autorizzo il trattamento dei dati personali contenuti nel mio CV ai sensi dell'art. 13 del Regolamento UE 2016/679 (GDPR) sulla protezione dei dati personali.
     </p>
   </main>
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:880,&quot;height&quot;:1180}}">
 class Component extends DCLogic {
-  state = { lang: 'it' };
+  state = { lang: 'en' };
   renderVals() {
     const lang = this.state.lang;
     const it = lang === 'it';
