@@ -65,6 +65,9 @@
     background:color-mix(in srgb, var(--color-bg) 90%, transparent);
     -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
   }
+  /* Nudge the brand in from the toolbar's left edge so it lines up with the
+     nav chips below (whose text sits ~10px in from their padding). */
+  .cv-brand{padding-left:10px}
   .cv-nav{
     display:flex;flex-wrap:wrap;gap:2px 4px;
     padding-top:var(--space-2);
@@ -409,10 +412,11 @@
       </aside>
     </div>
 
-    <!-- GDPR clause — Italian convention, shown in the IT version only.
+    <!-- GDPR consent — shown in both languages.
          References the EU Regulation only (the old national decree is repealed). -->
-    <p data-it="" style="font-size:9.5px;line-height:1.5;color:var(--color-neutral-600);margin:var(--space-8) 0 0;padding-top:var(--space-3);border-top:1px solid var(--color-divider)">
-      Autorizzo il trattamento dei dati personali contenuti nel mio CV ai sensi dell'art. 13 del Regolamento UE 2016/679 (GDPR) sulla protezione dei dati personali.
+    <p style="font-size:9.5px;line-height:1.5;color:var(--color-neutral-600);margin:var(--space-8) 0 0;padding-top:var(--space-3);border-top:1px solid var(--color-divider)">
+      <span data-it="">Autorizzo il trattamento dei dati personali contenuti nel mio CV ai sensi dell'art. 13 del Regolamento UE 2016/679 (GDPR) sulla protezione dei dati personali.</span>
+      <span data-en="">I authorise the processing of the personal data contained in my CV pursuant to Article 13 of EU Regulation 2016/679 (GDPR) on the protection of personal data.</span>
     </p>
   </main>
 </div>
