@@ -1,0 +1,12 @@
+{
+  "name": "cv-pdf-tools",
+  "private": true,
+  "type": "module",
+  "description": "Build-time PDF generation for the CV (headless Chromium + print CSS).",
+  "scripts": {
+    "pdf": "node generate-pdfs.mjs"
+  },
+  "dependencies": {
+    "playwright-core": "^1.49.1"
+  }
+}
