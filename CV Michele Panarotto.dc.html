@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="description" content="CV di Michele Panarotto — Analista Programmatore e Java Back-End Developer presso Galileo Network. Microservizi Spring Boot, analisi tecnica, integrazione IA.">
+<link rel="stylesheet" href="./styles.css">
+<script src="./image-slot.js"></script>
+<style>
+  [data-en]{display:none}
+  [data-lang="en"] [data-it]{display:none}
+  [data-lang="en"] [data-en]{display:revert}
+  .cv-bullets{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:var(--space-1)}
+  .cv-bullets li{position:relative;padding-left:16px;font-size:12.5px;line-height:1.5}
+  .cv-bullets li::before{content:"";position:absolute;left:0;top:8px;width:6px;height:1px;background:var(--color-accent)}
+  @media print{
+    .cv-toolbar{display:none!important}
+    body{background:#fff}
+    .cv-stage{padding:0!important}
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Michele Panarotto",
+  "jobTitle": "Analista Programmatore / Java Back-End Developer",
+  "email": "mailto:michelepanarotto00@gmail.com",
+  "telephone": "+393482107733",
+  "url": "https://www.linkedin.com/in/michelepanarotto",
+  "sameAs": ["https://www.linkedin.com/in/michelepanarotto"],
+  "address": {"@type": "PostalAddress", "addressLocality": "Padova", "addressRegion": "PD", "addressCountry": "IT"},
+  "knowsLanguage": [
+    {"@type": "Language", "name": "Italian", "alternateName": "Native"},
+    {"@type": "Language", "name": "English", "alternateName": "B2"}
+  ],
+  "worksFor": {"@type": "Organization", "name": "Galileo Network s.p.a.", "location": "Padova, IT"},
+  "hasOccupation": {
+    "@type": "Occupation",
+    "name": "Analista Programmatore / Java Back-End Developer",
+    "occupationLocation": {"@type": "City", "name": "Padova"},
+    "skills": "Java, Spring Boot, Maven, Hibernate, REST API, microservizi, SQL, Liquibase, Elasticsearch, Kibana, Docker, Alfresco, Git, Playwright, Agile, Intelligenza Artificiale"
+  },
+  "alumniOf": [
+    {"@type": "EducationalOrganization", "name": "Fondazione ITS Kennedy ICT"},
+    {"@type": "EducationalOrganization", "name": "IIS Silvio Ceccato"}
+  ],
+  "knowsAbout": ["Microservizi Java", "Spring Boot", "Analisi tecnica", "Centrale Rischi", "Gestione documentale", "Integrazione strumenti di Intelligenza Artificiale"]
+}
+</script>
+</helmet>
+
+<div class="cv-stage" style="min-height:100vh;background:var(--color-bg);padding:var(--space-8) var(--space-6);display:flex;flex-direction:column;align-items:center;gap:var(--space-4)" data-lang="{{ lang }}">
+
+  <div class="cv-toolbar" style="width:min(820px,100%);display:flex;align-items:center;justify-content:space-between;gap:var(--space-3)">
+    <span style="font-family:var(--font-heading);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-accent-700)">
+      <span data-it="">CURRICULUM</span><span data-en="">Résumé · interactive version</span>
+    </span>
+    <div style="display:flex;align-items:center;gap:var(--space-3)">
+      <div class="seg" role="group" aria-label="Language">
+        <button class="seg-opt" style="background:{{ itBg }};color:{{ itFg }}" onClick="{{ setIt }}" aria-pressed="{{ isIt }}">IT</button>
+        <button class="seg-opt" style="background:{{ enBg }};color:{{ enFg }}" onClick="{{ setEn }}" aria-pressed="{{ isEn }}">EN</button>
+      </div>
+      <button class="btn btn-secondary" onClick="{{ printCv }}">
+        <span data-it="">Stampa / PDF</span><span data-en="">Print / PDF</span>
+      </button>
+    </div>
+  </div>
+
+  <main class="blueprint elev-md" style="width:min(820px,100%);background:var(--color-bg);padding:var(--space-8)">
+    <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+
+    <!-- HEADER -->
+    <header style="display:grid;grid-template-columns:1fr 150px;gap:var(--space-6);align-items:start">
+      <div>
+        <div style="font-family:var(--font-heading);font-size:11px;letter-spacing:0.28em;text-transform:uppercase;color:var(--color-accent-700);margin-bottom:6px">
+          <span data-it="">Analista Programmatore</span><span data-en="">Analyst Programmer</span>
+        </div>
+        <h1 style="font-size:46px;line-height:0.98;margin:0 0 var(--space-2);text-transform:uppercase;letter-spacing:-0.01em">Michele<br>Panarotto</h1>
+        <p style="font-size:13px;line-height:1.55;max-width:46ch;margin:var(--space-2) 0 0;color:var(--color-neutral-800)">
+          <span data-it="">Sviluppatore back-end in Galileo Network. Progetto, analizzo, mantengo e sviluppo microservizi Java / Spring Boot, che si occupano della gestione di CRM in ambito finanziario. Integro strumenti di Intelligenza Artificiale nel lavoro quotidiano.</span>
+          <span data-en="">Back-end developer at Galileo Network. I design, analyse and maintain Java / Spring Boot microservices fully autonomously, running business-critical processes — from email delivery to Centrale Rischi to document management. I bring Artificial Intelligence tools into my daily work.</span>
+        </p>
+      </div>
+      <figure class="blueprint" style="margin:0;width:150px;height:180px">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <image-slot id="cv-photo" shape="rect" fit="cover" src="uploads/photo_2026-08-13%2010.28.05.jpeg" placeholder="Foto"></image-slot>
+      </figure>
+    </header>
+
+    <!-- CONTACT STRIP -->
+    <div style="display:flex;flex-wrap:wrap;gap:var(--space-2) var(--space-6);margin:var(--space-6) 0 var(--space-4);padding-top:var(--space-3);border-top:1px solid var(--color-divider);font-size:12px;font-family:var(--font-heading);letter-spacing:0.03em">
+      <span style="color:var(--color-neutral-700)">Padova, PD</span>
+      <a href="tel:+393482107733" style="text-decoration:none">+39 348 210 7733</a>
+      <a href="mailto:michelepanarotto00@gmail.com" style="text-decoration:none">michelepanarotto00@gmail.com</a>
+      <a href="https://www.linkedin.com/in/michelepanarotto" target="_blank" rel="noopener" style="text-decoration:none">linkedin.com/in/michelepanarotto</a>
+    </div>
+
+    <!-- BODY GRID -->
+    <div style="display:grid;grid-template-columns:1fr 250px;gap:var(--space-8)">
+
+      <!-- MAIN COLUMN -->
+      <div>
+        <!-- Experience -->
+        <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-4)">
+          <span style="width:8px;height:8px;background:var(--color-accent);flex:none"></span>
+          <h2 style="font-size:15px;text-transform:uppercase;letter-spacing:0.16em;margin:0">
+            <span data-it="">Esperienza professionale</span><span data-en="">Professional experience</span>
+          </h2>
+          <span style="flex:1;height:1px;background:var(--color-divider)"></span>
+        </div>
+
+        <article style="margin-bottom:var(--space-6)">
+          <div style="display:flex;justify-content:space-between;gap:var(--space-3);align-items:baseline">
+            <h3 style="font-size:18px;margin:0">
+              <span data-it="">Analista Programmatore · Java Back-End Developer</span><span data-en="">Analyst Programmer · Java Back-End Developer</span>
+            </h3>
+            <span style="font-size:11px;white-space:nowrap;font-family:var(--font-heading);letter-spacing:0.06em;color:var(--color-neutral-600)">
+              <span data-it="">OTT 2021 — OGGI</span><span data-en="">OCT 2021 — PRESENT</span>
+            </span>
+          </div>
+          <div style="font-size:12px;color:var(--color-accent-700);font-weight:700;margin:2px 0 var(--space-2)">Galileo Network s.p.a. · Padova</div>
+          <ul class="cv-bullets">
+            <li><span data-it="">Progettazione e sviluppo autonomo di servizi REST in Spring Boot, Maven e Hibernate su architettura a microservizi.</span><span data-en="">Autonomous design and development of REST services in Spring Boot, Maven and Hibernate on a microservices architecture.</span></li>
+            <li><span data-it="">Analisi tecnica dei microservizi che gestisco a copertura di vari processi.</span><span data-en="">Technical analysis of the microservices I manage — a steadily growing set — covering processes such as email delivery, Centrale Rischi and document management.</span></li>
+            <li><span data-it="">Gestione e risoluzione in autonomia delle segnalazioni dei clienti.</span><span data-en="">Independent handling and resolution of client-reported issues.</span></li>
+            <li><span data-it="">Interfaccia con l'azienda esterna che sviluppa la UI del software, coordinando i relativi ticket.</span><span data-en="">Liaising with the external company that builds the software UI, coordinating its tickets.</span></li>
+            <li><span data-it="">Sviluppo in modalità Agile e collaborazione con i team sulle nuove parti dell'applicativo.</span><span data-en="">Agile delivery and collaboration with teams on new parts of the application.</span></li>
+            <li><span data-it="">Uso quotidiano di strumenti di IA da circa un anno, di cui ~7–8 mesi in ambito aziendale.</span><span data-en="">Daily use of AI tools for about a year, ~7–8 months of it in a company setting.</span></li>
+          </ul>
+          <div style="font-size:11px;color:var(--color-neutral-600);font-style:italic;margin-top:var(--space-2)">
+            <span data-it="">Percorso avviato con due stage (set–nov 2020, feb–mag 2021) sotto la guida di uno sviluppatore Senior.</span><span data-en="">Path started with two internships (Sep–Nov 2020, Feb–May 2021) under a Senior developer.</span>
+          </div>
+        </article>
+
+        <article style="margin-bottom:var(--space-2)">
+          <div style="display:flex;justify-content:space-between;gap:var(--space-3);align-items:baseline">
+            <h3 style="font-size:18px;margin:0">
+              <span data-it="">Cameriere bar e ristorante <span style="font-size:12px;color:var(--color-neutral-600)">(part-time)</span></span><span data-en="">Bar &amp; restaurant server <span style="font-size:12px;color:var(--color-neutral-600)">(part-time)</span></span>
+            </h3>
+            <span style="font-size:11px;white-space:nowrap;font-family:var(--font-heading);letter-spacing:0.06em;color:var(--color-neutral-600)">
+              <span data-it="">GIU 2018 — OTT 2021</span><span data-en="">JUN 2018 — OCT 2021</span>
+            </span>
+          </div>
+          <div style="font-size:12px;color:var(--color-accent-700);font-weight:700;margin:2px 0 var(--space-2)">Bar Ristorante al Pellegrino · Chiampo</div>
+          <ul class="cv-bullets">
+            <li><span data-it="">Gestione della sala ristorante e bar.</span><span data-en="">Front-of-house service in the restaurant and bar.</span></li>
+          </ul>
+        </article>
+
+        <!-- Education -->
+        <div style="display:flex;align-items:center;gap:var(--space-3);margin:var(--space-8) 0 var(--space-4)">
+          <span style="width:8px;height:8px;background:var(--color-accent);flex:none"></span>
+          <h2 style="font-size:15px;text-transform:uppercase;letter-spacing:0.16em;margin:0">
+            <span data-it="">Istruzione e formazione</span><span data-en="">Education &amp; training</span>
+          </h2>
+          <span style="flex:1;height:1px;background:var(--color-divider)"></span>
+        </div>
+
+        <article style="margin-bottom:var(--space-4)">
+          <div style="display:flex;justify-content:space-between;gap:var(--space-3);align-items:baseline">
+            <h3 style="font-size:16px;margin:0">
+              <span data-it="">Specializzazione 2° livello (CS2) — Web e Cloud Developer</span><span data-en="">Level-2 Specialisation (CS2) — Web &amp; Cloud Developer</span>
+            </h3>
+            <span style="font-size:11px;white-space:nowrap;font-family:var(--font-heading);letter-spacing:0.06em;color:var(--color-neutral-600)">
+              <span data-it="">GEN 2019 — AGO 2021</span><span data-en="">JAN 2019 — AUG 2021</span>
+            </span>
+          </div>
+          <div style="font-size:12px;color:var(--color-accent-700);font-weight:700;margin:2px 0 4px">Fondazione ITS Kennedy ICT · Padova</div>
+          <p style="font-size:12px;margin:0;color:var(--color-neutral-800)">
+            <span data-it="">Web development: Git, SQL Server, networking e sistemi operativi, Angular, C#, .NET, Java, SpringBoot, JavaScript, AWS, Azure, REST API.</span><span data-en="">Web development: Git, SQL Server, networking &amp; operating systems, Angular, C#, Java, JavaScript, AWS, Azure, REST APIs.</span>
+          </p>
+        </article>
+
+        <article>
+          <div style="display:flex;justify-content:space-between;gap:var(--space-3);align-items:baseline">
+            <h3 style="font-size:16px;margin:0">
+              <span data-it="">Diploma in Informatica e Telecomunicazioni</span><span data-en="">Diploma in Computer Science &amp; Telecommunications</span>
+            </h3>
+            <span style="font-size:11px;white-space:nowrap;font-family:var(--font-heading);letter-spacing:0.06em;color:var(--color-neutral-600)">
+              <span data-it="">2014 — 2019</span><span data-en="">2014 — 2019</span>
+            </span>
+          </div>
+          <div style="font-size:12px;color:var(--color-accent-700);font-weight:700;margin:2px 0 4px">IIS Silvio Ceccato · Montecchio Maggiore</div>
+          <p style="font-size:12px;margin:0;color:var(--color-neutral-800)">
+            <span data-it="">Basi di programmazione a oggetti (C++, Java) e sviluppo web (HTML, CSS, JavaScript, PHP), SQL.</span><span data-en="">Object-oriented programming fundamentals (C++, Java) and web development (HTML, CSS, JavaScript, PHP), SQL.</span>
+          </p>
+        </article>
+      </div>
+
+      <!-- SIDEBAR -->
+      <aside style="display:flex;flex-direction:column;gap:var(--space-6)">
+        <!-- AI highlight -->
+        <div class="blueprint" style="padding:var(--space-3);background:var(--color-accent-100)">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div style="font-family:var(--font-heading);font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--color-accent-800);margin-bottom:4px">
+            <span data-it="">Intelligenza Artificiale</span><span data-en="">Artificial Intelligence</span>
+          </div>
+          <div style="font-size:12px;line-height:1.45;color:var(--color-accent-900)">
+            <span data-it="">Uso quotidiano di strumenti di IA da circa un anno; ~7–8 mesi in contesto aziendale.</span><span data-en="">Daily use of AI tools for about a year; ~7–8 months in a company setting.</span>
+          </div>
+        </div>
+
+        <!-- Skills -->
+        <div>
+          <div style="display:flex;align-items:center;gap:var(--space-2);margin-bottom:var(--space-3)">
+            <span style="width:8px;height:8px;background:var(--color-accent);flex:none"></span>
+            <h2 style="font-size:13px;text-transform:uppercase;letter-spacing:0.14em;margin:0">
+              <span data-it="">Competenze</span><span data-en="">Skills</span>
+            </h2>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+            <div>
+              <div style="font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-neutral-600);margin-bottom:4px">Back-end</div>
+              <div style="font-size:12px;line-height:1.5">Java · Spring Boot · Maven · Hibernate · REST API</div>
+            </div>
+            <div>
+              <div style="font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-neutral-600);margin-bottom:4px"><span data-it="">Dati &amp; tool</span><span data-en="">Data &amp; tools</span></div>
+              <div style="font-size:12px;line-height:1.5">SQL · Liquibase · Elasticsearch / Kibana · Docker · Alfresco · Git ...</div>
+            </div>
+            <div>
+              <div style="font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-neutral-600);margin-bottom:4px">Testing</div>
+              <div style="font-size:12px;line-height:1.5">Playwright <span style="color:var(--color-neutral-600)"><span data-it="">(base)</span><span data-en="">(basic)</span></span></div>
+            </div>
+            <div>
+              <div style="font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-neutral-600);margin-bottom:4px"><span data-it="">Metodo</span><span data-en="">Practices</span></div>
+              <div style="font-size:12px;line-height:1.5"><span data-it="">Agile · Problem solving · Solid</span><span data-en="">Agile · Problem solving · Autonomy</span></div>
+            </div>
+            <div>
+              <div style="font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-neutral-600);margin-bottom:4px"><span data-it="">Altre</span><span data-en="">Also</span></div>
+              <div style="font-size:12px;line-height:1.5">Angular · C# · JavaScript · AWS · Azure</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Languages -->
+        <div>
+          <div style="display:flex;align-items:center;gap:var(--space-2);margin-bottom:var(--space-3)">
+            <span style="width:8px;height:8px;background:var(--color-accent);flex:none"></span>
+            <h2 style="font-size:13px;text-transform:uppercase;letter-spacing:0.14em;margin:0">
+              <span data-it="">Lingue</span><span data-en="">Languages</span>
+            </h2>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px;font-size:12px">
+            <div style="display:flex;justify-content:space-between"><span data-it="">Italiano</span><span data-en="">Italian</span><span style="color:var(--color-neutral-600)"><span data-it="">Madrelingua</span><span data-en="">Native</span></span></div>
+            <div style="display:flex;justify-content:space-between"><span data-it="">Inglese</span><span data-en="">English</span><span style="color:var(--color-neutral-600)">B2</span></div>
+          </div>
+        </div>
+
+        <!-- License -->
+        <div>
+          <div style="display:flex;align-items:center;gap:var(--space-2);margin-bottom:var(--space-3)">
+            <span style="width:8px;height:8px;background:var(--color-accent);flex:none"></span>
+            <h2 style="font-size:13px;text-transform:uppercase;letter-spacing:0.14em;margin:0">
+              <span data-it="">Patente</span><span data-en="">Driving licence</span>
+            </h2>
+          </div>
+          <div style="font-size:12px"><span data-it="">Patente B — automunito</span><span data-en="">Category B — own car</span></div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- GDPR -->
+    <p style="font-size:9.5px;line-height:1.5;color:var(--color-neutral-600);margin:var(--space-8) 0 0;padding-top:var(--space-3);border-top:1px solid var(--color-divider)">
+      <span data-it="">Autorizzo il trattamento dei dati personali contenuti nel mio CV ex art. 13 del D.lgs. 196/2003 e art. 13 del Regolamento UE 2016/679 sulla protezione dei dati personali.</span>
+      <span data-en="">I authorise the processing of the personal data contained in this CV pursuant to art. 13 of Legislative Decree 196/2003 and art. 13 of EU Regulation 2016/679 on the protection of personal data.</span>
+    </p>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:880,&quot;height&quot;:1180}}">
+class Component extends DCLogic {
+  state = { lang: 'it' };
+  renderVals() {
+    const lang = this.state.lang;
+    const it = lang === 'it';
+    const accent = 'var(--color-accent)', bg = 'var(--color-bg)', txt = 'var(--color-text)';
+    return {
+      lang,
+      isIt: it, isEn: !it,
+      itBg: it ? accent : 'transparent', itFg: it ? bg : txt,
+      enBg: !it ? accent : 'transparent', enFg: !it ? bg : txt,
+      setIt: () => this.setState({ lang: 'it' }),
+      setEn: () => this.setState({ lang: 'en' }),
+      printCv: () => window.print(),
+    };
+  }
+}
+</script>
+</body>
+</html>
