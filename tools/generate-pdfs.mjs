@@ -128,9 +128,9 @@ async function renderLang(browser, base, lang, assets) {
   await page.goto(`${base}/index.html`, { waitUntil: 'domcontentloaded', timeout: 60000 });
 
   // Wait for the runtime to mount actual CV content, not just the shell
-  // (10 experience bullets rendered inside the mounted stage).
+  // (the experience bullets are rendered inside the mounted stage).
   await page.waitForFunction(
-    () => document.querySelectorAll('.cv-bullets li').length >= 10 &&
+    () => document.querySelectorAll('.cv-bullets li').length >= 5 &&
           document.querySelector('.cv-stage[data-lang]'),
     { timeout: 60000 },
   );
