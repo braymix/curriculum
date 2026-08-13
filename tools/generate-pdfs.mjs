@@ -135,12 +135,14 @@ async function renderLang(browser, base, lang, assets) {
     { timeout: 60000 },
   );
 
-  if (lang === 'en') {
-    await page.getByRole('button', { name: 'EN', exact: true }).click();
-    await page.waitForFunction(() => document.querySelector('.cv-stage')?.getAttribute('data-lang') === 'en', { timeout: 15000 });
-  } else {
-    await page.waitForFunction(() => document.querySelector('.cv-stage')?.getAttribute('data-lang') === 'it', { timeout: 15000 });
-  }
+  // Click the toggle for the target language rather than assuming a default —
+  // the page loads English-first, so both renders switch explicitly.
+  await page.getByRole('button', { name: lang.toUpperCase(), exact: true }).click();
+  await page.waitForFunction(
+    (l) => document.querySelector('.cv-stage')?.getAttribute('data-lang') === l,
+    lang,
+    { timeout: 15000 },
+  );
 
   await page.evaluate(() => document.fonts.ready);
   await page.emulateMedia({ media: 'print' });
