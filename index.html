@@ -26,7 +26,7 @@
      too. These rules trim the screen chrome and tune the page for A4. */
   @page{size:A4;margin:13mm}
   @media print{
-    :root{--space-8:6px;--space-6:6px;--space-4:5px;--space-3:3px;--space-2:3px;--space-1:1.5px}
+    :root{--space-8:5px;--space-6:5px;--space-4:4px;--space-3:3px;--space-2:2.5px;--space-1:1.5px}
     html,body{background:#fff!important}
     /* Belt-and-braces: guarantee the inactive language never prints. */
     [data-en]{display:none!important}
@@ -47,7 +47,7 @@
        stay in a slim right column, exactly like the live site on desktop. */
     main.blueprint .cv-body{grid-template-columns:1fr 232px!important;gap:var(--space-6)!important;align-items:start}
     body{font-size:11px}
-    .cv-bullets li{font-size:10.5px;line-height:1.32;padding-left:13px}
+    .cv-bullets li{font-size:10.5px;line-height:1.3;padding-left:13px}
     /* Tighten the prose paragraphs (summary, AI section, education, waiter) so
        the left column fits one A4 page next to the sidebar. */
     .cv-header p{line-height:1.38!important}
@@ -276,8 +276,8 @@
           </div>
           <ul class="cv-bullets">
             <li>
-              <span data-en="">Sole owner of 10 Java / Spring Boot microservices (8 in production), some built from scratch and others inherited, across distinct functional domains — <span class="cv-domains">credit risk reporting, AML, document management, mail / PEC delivery, scheduling, questionnaires, consulting management, advanced task lists</span> — from analysis to release to production support. These include Pulse for webhook management and orchestration (in production) and mail / PEC delivery over proprietary or customer SMTP with OAuth2 Google / Microsoft (PEC via MailDocPro). End-to-end ownership in a team where colleagues manage gateway and other services.</span>
-              <span data-it="">Unico responsabile di 10 microservizi Java / Spring Boot (8 in produzione), alcuni sviluppati da zero e altri ereditati, su domini funzionali distinti — <span class="cv-domains">centrale rischi, antiriciclaggio, gestione documentale, invio mail / PEC, agenda appuntamenti, questionari, consulenze, task list avanzate</span> — dall'analisi al rilascio fino al supporto in produzione. Tra questi Pulse per la gestione e l'orchestrazione di webhook (in produzione) e l'invio mail e PEC con SMTP proprietario o del cliente e OAuth2 Google / Microsoft (PEC via MailDocPro). Lavoro in autonomia in un team dove i colleghi presidiano gateway e altri servizi.</span>
+              <span data-en="">Sole owner of 10 Java / Spring Boot microservices (8 in production), some built from scratch and others inherited, across distinct functional domains — <span class="cv-domains">credit risk reporting, AML, document management, mail / PEC delivery, scheduling, questionnaires, consulting management, advanced task lists</span> — from analysis to release to production support. These include Pulse (webhook orchestration, in production) and mail / PEC delivery (SMTP with OAuth2 Google / Microsoft; PEC via MailDocPro). End-to-end ownership; colleagues manage the gateway and other services.</span>
+              <span data-it="">Unico responsabile di 10 microservizi Java / Spring Boot (8 in produzione), alcuni sviluppati da zero e altri ereditati, su domini funzionali distinti — <span class="cv-domains">centrale rischi, antiriciclaggio, gestione documentale, invio mail / PEC, agenda appuntamenti, questionari, consulenze, task list avanzate</span> — dall'analisi al rilascio fino al supporto in produzione. Tra questi Pulse (orchestrazione di webhook, in produzione) e l'invio mail e PEC (SMTP con OAuth2 Google / Microsoft; PEC via MailDocPro). Lavoro in autonomia; i colleghi presidiano il gateway e altri servizi.</span>
             </li>
             <li>
               <span data-en="">Regulatory scope: primary data management for Bank of Italy reporting via external providers; design of AML risk scoring and updates workflow, orchestrated across multiple microservices (PEC = certified email, legally binding in Italy).</span>
@@ -296,13 +296,14 @@
               <span data-it="">Unico punto di contatto tecnico con l'azienda esterna che sviluppa la UI: coordinamento di deploy, bug e rilasci su tre software.</span>
             </li>
             <li>
-              <span data-en="">Point of contact with support on error handling, and with other departments on the functional side: I bring the technical expertise and we carry out the analysis together.</span>
-              <span data-it="">Interfaccia con l'assistenza per la gestione degli errori e con gli altri reparti per la parte funzionale: porto la componente tecnica e conduciamo insieme l'analisi.</span>
+              <span data-en="">When the PM, help-desk, projects or account management bring a functional need, I make it technical and split it into sub-tasks for the colleagues involved — UI included — through to production.</span>
+              <span data-it="">Quando il PM, l'help desk, l'area progetti o l'account management portano una necessità funzionale, la rendo tecnica e la scompongo nei sotto-task per i colleghi coinvolti — UI inclusa — fino alla produzione.</span>
+            </li>
+            <li>
+              <span data-en="">Production incidents: I triage help-desk reports — dispatching them to the right owner or investigating myself across logs and call traces on my services and the gateway — and, when the fault is mine, fix and release to production with the deploy owner.</span>
+              <span data-it="">Incidenti in produzione: gestisco le segnalazioni dell'help desk — le indirizzo a chi di competenza o le analizzo io su log e tracce delle chiamate, dei miei servizi e del gateway — e, quando l'errore è mio, correggo e rilascio in produzione con il responsabile dei deploy.</span>
             </li>
           </ul>
-          <div style="font-size:11px;color:var(--color-neutral-600);font-style:italic;margin-top:var(--space-2)">
-            <span data-it="">Percorso avviato con due stage (set–nov 2020, feb–mag 2021) sotto la guida di uno sviluppatore Senior.</span><span data-en="">Path started with two internships (Sep–Nov 2020, Feb–May 2021) under a senior developer.</span>
-          </div>
         </article>
 
         <!-- OPTIONAL BLOCK — remove this single line to drop the waiter job -->
